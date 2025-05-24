@@ -1,0 +1,48 @@
+The `Laravel Auth Logs` package provides a robust way to log and manage user authentication events in your Laravel application.
+
+This section will guide you through the key features and functionalities of the package, helping you understand how it works and how to utilize it effectively.
+
+## Key Features
+- **Automatic Logging**: The package automatically logs user login, logout, and failed login attempts without requiring additional code.
+
+- **Customizable Notifications**: You can configure notification templates for various authentication events, allowing you to tailor the user experience.
+
+- **Geolocation Support**: The package can fetch geolocation information for logged events, providing context about where authentication events occur.
+
+- **Retention Management**: It includes a built-in mechanism to purge old logs based on a specified retention period, helping you manage database size and performance.
+
+## How It Works
+### Event Listeners
+The package listens for authentication events in Laravel, such as user login, logout, and failed login attempts. When these events occur, the package automatically triggers the appropriate logging functionality.
+### Logging Mechanism
+When an authentication event is detected, the package creates a new log entry in the specified database table. This entry includes details such as:
+- User ID
+- Event type (login, logout, failed login)
+- Timestamp of the event
+- IP address of the user
+- Geolocation data (if enabled)
+### Notification System
+If configured, the package sends notifications to users about significant authentication events, such as logins
+from new devices or failed login attempts.
+The notification templates can be customized to fit your application's branding and messaging.
+### Purging Old Logs
+The package includes a retention policy that automatically purges old authentication logs based on the configured retention period.
+This helps keep your database clean and optimized.
+### Model Integration
+To utilize the package, you need to integrate it with your user model by adding the `AuthLogs` trait.
+This trait provides methods to access authentication logs and perform related operations, such as checking the last login time or registering a logout event.
+### Configuration
+The package comes with a configuration file that allows you to customize various aspects of its behavior, including:
+- Table name for storing logs
+- Date format for notifications
+- Geolocation API endpoint
+- Database connection settings
+### Customization
+You can extend the package's functionality by creating custom event listeners or notification templates.
+This allows you to tailor the package to your specific application needs.
+## Conclusion
+The `Laravel Auth Logs` package provides a comprehensive solution for managing user authentication events in Laravel applications.
+By leveraging its features, you can enhance security, improve user experience, and maintain a clean and efficient logging system.
+For more detailed information on how to set up and use the package, refer to the [Installation Guide](./../installation) and [Usage Documentation](./prepare_your_model).
+For any questions or issues, feel free to reach out to the community or check the [GitHub repository](https://github.com/akira-io/laravel-auth-logs) for support and contributions.
+

@@ -1,0 +1,41 @@
+Before using the **Laravel Auth Logs** package, you need to prepare your model to support auth logs functionality.
+
+This section will guide you through the steps required to set up your model.
+
+###  Add the `AuthLogs` Trait
+To enable access to the auth logs functionality, you need to add the `AuthLogs` trait to your model.
+This trait provides the necessary methods and properties for logging authentication events.
+
+```php
+<?php
+declare(strict_types=1);
+
+namespace App\Models;
+
+use Akira\LaravelAuthLogs\Traits\AuthLogs;
+
+class User extends Authenticatable
+{
+    use AuthLogs;
+
+    // Your model code here
+}
+```
+The `AuthLogs` trait will add some methods to your model.
+
+- `authenticationLogs()`: Retrieves the authentication logs for the user.
+- `latestAuthentication()`: Retrieves the latest authentication log for the user.
+- `notifyAuthenticationLogVia()`: Notifies the user about authentication events.
+- `lastLoginAt()`: Retrieves the timestamp of the user's last login.
+- `lastSuccessfulLoginAt()`: Retrieves the timestamp of the user's last successful login.
+- `lastLoginIp()`: Retrieves the IP address of the user's last login.
+- `lastSuccessfulLoginIp()`: Retrieves the IP address of the user's last successful login.
+- `previousLoginAt()`: Retrieves the timestamp of the user's previous login.
+-`previousLoginIp()`: Retrieves the IP address of the user's previous login.
+- `registerLogout()`: Registers a logout event for the user.
+- `isNew()`: Checks if the user is new based on the authentication logs.
+
+
+
+
+
