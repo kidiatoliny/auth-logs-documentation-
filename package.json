@@ -1,7 +1,7 @@
 {
-  "name": "laravel-followable",
+  "name": "laravel-auth-logs",
   "version": "0.0.1",
-  "description": "A lightweight and flexible Laravel package that adds follow/unfollow functionality to Eloquent models. It allows users to follow other users, track entities, and manage relationships effortlessly.",
+  "description": "A lightweight and flexible Laravel package that adds auth logs functionality to Eloquent models. It allows users to track auth logs effortlessly.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/akira-io/laravel-followable.git"
+    "url": "git+https://github.com/akira-io/laravel-auth-logs.git"
   },
   "author": "Akira Corporation",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/akira-io/laravel-followable/issues"
+    "url": "https://github.com/akira-io/laravel-auth-logs/issues"
   },
-  "homepage": "https://github.com/akira-io/laravel-followable#readme",
+  "homepage": "https://github.com/akira-io/laravel-auth-logs#readme",
   "dependencies": {
     "next": "14.2.26",
     "nextra": "^2.5.3",
